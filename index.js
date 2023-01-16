@@ -25,6 +25,7 @@ class Sprite {
         }
         this.color = color
         this.isAttacking
+        this.health = 100
     }
 
 
@@ -35,7 +36,11 @@ class Sprite {
         //attack box
         if(this.isAttacking) {
             c.fillStyle = 'green'
-            c.fillRect(this.attackBox.position.x, this.attackBox.position.y, this.attackBox.width, this.attackBox.height
+            c.fillRect(
+                this.attackBox.position.x,
+                this.attackBox.position.y,
+                this.attackBox.width,
+                this.attackBox.height
             )
         }
     }
@@ -150,17 +155,20 @@ function animation() {
         rectangleCollision({
             rectangle1: player,
             rectangle2: enemy
-        }) && player.isAttacking
+        }) &&
+        player.isAttacking
     ) {
         player.isAttacking = false
-        console.log("Player Hits")
+        enemy.health -= 20
+        document.querySelector('#enemyHealth').style.width = enemy.health + "%"
     }
 
     if (
         rectangleCollision({
             rectangle1: enemy,
             rectangle2: player
-        }) && enemy.isAttacking
+        })
+        && enemy.isAttacking
     ) {
         enemy.isAttacking = false
         console.log("Enemy Hits")
@@ -202,7 +210,6 @@ window.addEventListener('keydown', (event) => {
             enemy.isAttacking= true
             break
     }
-    console.log(event.key)
 })
 
 window.addEventListener('keyup', (event) => {
@@ -229,5 +236,4 @@ window.addEventListener('keyup', (event) => {
             keys.ArrowDown.pressed = false
             break
     }
-    console.log(event.key)
 })
