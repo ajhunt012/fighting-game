@@ -21,7 +21,7 @@ const shop = new Sprite({
         x: 600,
         y: 128
     },
-    imageSrc: 'images.shop_anim.png',
+    imageSrc: 'images/shop_anim.png',
     scale: 2.75,
     framesMax: 6
 })
@@ -217,7 +217,7 @@ function animate() {
         enemy.switchSprite('fall')
     }
 
-    // detect for collision & enemy gets hit
+    // detect for collision & enemy getting hit
     if (
         rectangularCollision({
             rectangle1: player,
