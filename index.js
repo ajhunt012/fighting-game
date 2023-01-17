@@ -43,7 +43,7 @@ const player = new Fighter({
     framesMax: 8,
     scale: 2.5,
     offset: {
-        x: 215,
+        x: 190,
         y: 157
     },
     sprites: {
@@ -88,7 +88,7 @@ const player = new Fighter({
 
 const enemy = new Fighter({
     position: {
-        x: 400,
+        x: 900,
         y: 100
     },
     velocity: {
@@ -100,7 +100,7 @@ const enemy = new Fighter({
         x: -50,
         y: 0
     },
-    imageSrc: 'images/Martial Hero 2/Sprites/Idle.png',
+    imageSrc: 'images/Martial Hero 2/Mirrored moves/Idle.png',
     framesMax: 4,
     scale: 2.5,
     offset: {
@@ -109,31 +109,31 @@ const enemy = new Fighter({
     },
     sprites: {
         idle: {
-            imageSrc: 'images/Martial Hero 2/Sprites/Idle.png',
+            imageSrc: 'images/Martial Hero 2/Mirrored moves/Idle.png',
             framesMax: 4
         },
         run: {
-            imageSrc: 'images/Martial Hero 2/Sprites/Run.png',
+            imageSrc: 'images/Martial Hero 2/Mirrored moves/Run.png',
             framesMax: 8
         },
         jump: {
-            imageSrc: 'images/Martial Hero 2/Sprites/Jump.png',
+            imageSrc: 'images/Martial Hero 2/Mirrored moves/Jump.png',
             framesMax: 2
         },
         fall: {
-            imageSrc: 'images/Martial Hero 2/Sprites/Fall.png',
+            imageSrc: 'images/Martial Hero 2/Mirrored moves/Fall.png',
             framesMax: 2
         },
         attack1: {
-            imageSrc: 'images/Martial Hero 2/Sprites/Attack1.png',
+            imageSrc: 'images/Martial Hero 2/Mirrored moves/Attack1.png',
             framesMax: 4
         },
         takeHit: {
-            imageSrc: 'images/Martial Hero 2/Sprites/Take hit.png',
+            imageSrc: 'images/Martial Hero 2/Mirrored moves/Take hit.png',
             framesMax: 3
         },
         death: {
-            imageSrc: 'images/Martial Hero 2/Sprites/Death.png',
+            imageSrc: 'images/Martial Hero 2/Mirrored moves/Death.png',
             framesMax: 7
         }
     },
